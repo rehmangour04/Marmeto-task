@@ -1,0 +1,131 @@
+<!-- @format -->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Product Details</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="product-container">
+      <div class="product-images">
+        <img id="main-image" src="" alt="Product Image" />
+        <div class="thumbnail-images" id="thumbnail-container"></div>
+      </div>
+
+      <div class="product-details">
+        <p id="product-vendor"></p>
+        <h1 id="product-title"></h1>
+        <hr />
+        <p id="product-type"></p>
+        <p id="product-price"></p>
+        <p id="product-compare-price"></p>
+        <hr />
+
+        <p id="choose-id">Choose Color</p>
+
+        <div id="choose-color">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="64"
+            height="64"
+            viewBox="0 0 64 64"
+            fill="none"
+          >
+            <rect x="7" y="7" width="50" height="50" fill="#ECDECC" />
+            <path
+              fill-rule="evenodd"
+              clip-rule="evenodd"
+              d="M43.2536 22.2527C43.8044 22.6689 43.9135 23.4528 43.4973 24.0036L30.7473 40.8786C30.5376 41.1563 30.2215 41.3339 29.8753 41.3688C29.529 41.4037 29.1839 41.2926 28.923 41.0624L20.423 33.5624C19.9053 33.1056 19.856 32.3157 20.3127 31.798C20.7695 31.2804 21.5594 31.231 22.077 31.6878L29.5657 38.2954L41.5027 22.4965C41.9188 21.9457 42.7027 21.8366 43.2536 22.2527Z"
+              fill="white"
+            />
+            <rect
+              x="1.5"
+              y="1.5"
+              width="61"
+              height="61"
+              stroke="#ECDECC"
+              stroke-width="3"
+            />
+          </svg>
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="64"
+            height="64"
+            viewBox="0 0 64 64"
+            fill="none"
+          >
+            <rect x="7" y="7" width="50" height="50" fill="#BBD278" />
+          </svg>
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="64"
+            height="64"
+            viewBox="0 0 64 64"
+            fill="none"
+          >
+            <rect x="7" y="7" width="50" height="50" fill="#BBC1F8" />
+          </svg>
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="64"
+            height="64"
+            viewBox="0 0 64 64"
+            fill="none"
+          >
+            <rect x="7" y="7" width="50" height="50" fill="#FFD3F8" />
+          </svg>
+        </div>
+        <div class="options">
+          <label for="color" id="choose-id"></label>
+          <select id="color" name="color"></select>
+        </div>
+        <!-- <div class="cloth-size-container">
+  <div class="size-id">
+
+    <p> Small</p>
+    
+
+    <p>Medium</p>
+    <p>Large</p>
+    <p>Extra Large</p>
+    <p>XXL</p>
+  </div>
+</div> -->
+        <div class="options">
+          <label for="size" id="choose-size">Choose Size</label>
+          <select id="size" name="size"></select>
+        </div>
+
+        <div class="counter-cart">
+          <div class="counter">
+            <button class="counter-button" onclick="updateCounter(-1)">
+              -
+            </button>
+            <span class="counter-value" id="quantity">1</span>
+            <button class="counter-button" onclick="updateCounter(1)">+</button>
+          </div>
+
+          <div class="button-container">
+            <button onclick="addToCart()">
+              <img src="assets/icons8-add-to-cart-50.png"Cart Icon" /> Add to
+              Cart
+            </button>
+          </div>
+        </div>
+        <p id="cart-message"></p>
+        <hr />
+
+        <p id="product-description"></p>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
